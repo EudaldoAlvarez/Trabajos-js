@@ -1,16 +1,15 @@
 
 var variable = prompt("Escribe algo para verificar si es un palindromo");
 
-function Palindromo (cadena){
-	var cadenaInvert=cadena.split().reverse().join();
-	cadena.replace(/ /g,"").toLowerCase();
-	cadenaInvert.replace(/ /g,"").toLowerCase();
+function Palindromo(cadena){
+	var clean = cadena.toLowerCase().replace(/ /g,'');
+	var cadenaInvert=clean.split().reverse().join();
 	
-	if(cadena==cadenaInvert){
+	if(clean==cadenaInvert){
 		alert("Es palindromo");
 	}else{
 		alert("No es palindromo");
 	}
 }
 
-alert(Palindromo(variable));
+Palindromo(variable);
