@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trabajo 17</title>
+	<script type="text/javascript">
+		
+		function limitador(e,target){
+			var cadena=target.value;
+			console.log(cadena);
+			if(cadena.length<=99 || e.keyCode == 8){
+				document.getElementById("t_contador").innerHTML="Te quedan: "+ (99-cadena.length)+ " caracteres";
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<label>
+			Solo puedes escribir hasta 100 caracteres
+		</label>
+		<br>
+		<textarea name="parrafo" autofocus="true" placeholder="Escribe aqui" cols="25" rows="6" onkeypress="return limitador(event,this)"></textarea>
+		<br>
+		<label id="t_contador">
+			Te quedan: 100 caracteres
+		</label>
+	</form>
+	<noscript>
+		se necesita activar js
+	</noscript>
+</body>
+</html>
