@@ -21,14 +21,20 @@
             function muestraInformacion(e) {
                 var informacion=document.getElementById("info");
                 if (e.type=="mousemove") {
+
                     informacion.innerHTML="<h1>Mouse</h1><p>Navegador ["+e.screenX+"] ["+e.screenY+"]</p>"+"<p>Pagina ["+e.pageX+"]["+e.pageY+"]</p>";
                     informacion.style.backgroundColor="white";
+
                 }else if (e.type=="keypress") {
+
                     informacion.innerHTML="<h1>Teclado</h1><p>Caracter ["+e.key+"]</p>"+"<p>Codigo ["+e.keyCode+"]</p>";
                     informacion.style.backgroundColor="#CCE6FF";
+
                     }else if (e.type="mosuedown") {
+
                         informacion.innerHTML="<h1>Mouse</h1><p>Navegador ["+e.screenX+"] ["+e.screenY+"]</p>"+"<p>Pagina ["+e.pageX+"]["+e.pageY+"]</p>";
                     informacion.style.backgroundColor="#FFFFCC";
+                    
                     }
                 
             }
