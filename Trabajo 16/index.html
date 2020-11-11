@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trabajo 16</title>
+	<script type="text/javascript">
+		function sololetras(target,e){
+			console.log(e.keyCode);
+			if (e.keyCode>=97 && e.keyCode<=122 || e.keyCode>=65 && e.keyCode<=90) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" name="soloTexto" placeholder="Solo letras" onkeypress="return sololetras(this,event)">
+	</form>
+	<noscript>
+		Se necesita activar js
+	</noscript>
+</body>
+</html>
